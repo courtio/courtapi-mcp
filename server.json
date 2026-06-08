@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.courtio/courtapi-mcp",
+  "title": "CourtAPI — Federal Court Data",
+  "description": "Search and retrieve US federal court cases, dockets, claims, and documents via PACER",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/courtio/courtapi-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@courtio/courtapi-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

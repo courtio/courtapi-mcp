@@ -1,0 +1,37 @@
+{
+  "name": "@courtio/courtapi-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for CourtAPI — search and retrieve US federal court cases, dockets, claims, and documents via PACER",
+  "license": "MIT",
+  "author": "CourtDrive <support@courtdrive.com>",
+  "homepage": "https://www.courtapi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/courtio/courtapi-mcp"
+  },
+  "keywords": ["mcp", "courtapi", "pacer", "legal", "court", "bankruptcy", "federal"],
+  "mcpName": "io.github.courtio/courtapi-mcp",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "courtapi-mcp": "dist/index.js"
+  },
+  "files": ["dist", "server.json", "README.md"],
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json",
+    "dev": "tsx --watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc && node --test dist/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": { "node": ">=20" }
+}
